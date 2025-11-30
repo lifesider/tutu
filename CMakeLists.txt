@@ -15,19 +15,21 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 
-# 源文件
+# 源文件列表
 set(SOURCES
     main.m
     AppDelegate.m
-    ViewController.m
-    ImageProcessor.cpp
+    MainViewController.m
+    ImageProcessor.m
     ImageProcessorBridge.mm
+    ImageProcessor.cpp
 )
 
 # 头文件
 set(HEADERS
     AppDelegate.h
-    ViewController.h
+    MainViewController.h
+    ImageProcessor.h
     ImageProcessor.hpp
     ImageProcessorBridge.h
 )

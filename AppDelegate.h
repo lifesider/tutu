@@ -1,7 +1,6 @@
 #import <UIKit/UIKit.h>
+#import <Photos/Photos.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @end
