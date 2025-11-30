@@ -3,4 +3,6 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
+@property (strong, nonatomic) UIWindow *window;
+
 @end

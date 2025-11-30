@@ -78,7 +78,7 @@
     self.importButton.layer.shadowOpacity = 0.3;
     self.importButton.layer.shadowOffset = CGSizeMake(0, 2);
     self.importButton.layer.shadowRadius = 4;
-    [self.importButton addTarget:self action:@selector(importImage:) forControlEvents:UIControlEventTouchUpInside];
+    [self.importButton addTarget:self action:@selector(importButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.importButton];
     
     // 导出按钮 - 右上角
@@ -92,7 +92,7 @@
     self.exportButton.layer.shadowOpacity = 0.3;
     self.exportButton.layer.shadowOffset = CGSizeMake(0, 2);
     self.exportButton.layer.shadowRadius = 4;
-    [self.exportButton addTarget:self action:@selector(exportImage:) forControlEvents:UIControlEventTouchUpInside];
+    [self.exportButton addTarget:self action:@selector(exportButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.exportButton];
 }
 
