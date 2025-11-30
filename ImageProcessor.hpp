@@ -2,20 +2,33 @@
 #define ImageProcessor_hpp
 
 #include <stdio.h>
-#include <UIKit/UIKit.h>
+#include <string>
+
+// 前向声明，避免在头文件中包含UIKit
+#ifdef __OBJC__
+@class UIImage;
+#else
+typedef struct UIImage UIImage;
+typedef struct CGRect {
+    float x;
+    float y;
+    float width;
+    float height;
+} CGRect;
+#endif
 
 class ImageProcessor {
 public:
     // 基础图像处理操作
-    static UIImage* applyBasicFilter(UIImage* image, const std::string& filterType);
-    static UIImage* rotateImage(UIImage* image, float degrees);
-    static UIImage* scaleImage(UIImage* image, float scale);
-    static UIImage* cropImage(UIImage* image, CGRect cropRect);
+    static void* applyBasicFilter(void* image, const std::string& filterType);
+    static void* rotateImage(void* image, float degrees);
+    static void* scaleImage(void* image, float scale);
+    static void* cropImage(void* image, float x, float y, float width, float height);
     
     // 高级图像处理
-    static UIImage* adjustBrightness(UIImage* image, float brightness);
-    static UIImage* adjustContrast(UIImage* image, float contrast);
-    static UIImage* adjustSaturation(UIImage* image, float saturation);
+    static void* adjustBrightness(void* image, float brightness);
+    static void* adjustContrast(void* image, float contrast);
+    static void* adjustSaturation(void* image, float saturation);
     
 private:
     // 辅助方法
